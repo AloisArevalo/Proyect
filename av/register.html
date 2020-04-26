@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Regístrate">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="../favicon.png">
+</head>
+<body>
+    <dialog id="modal">
+        <h2>Registro Exitoso</h2>
+        <p>Gracias por registrarse</p>
+        <button><a href="index.html">Volver al inicio</a></button>
+    </dialog>
+   <div>
+       <h1>Regístrate</h1>
+   </div>
+   <form>
+       <fieldset>
+           <legend>Datos de usuario</legend>
+           <div>
+               <label>
+                   Ingrese su nombre de usuario:
+                   <input type="text" id="username" name="username">
+               </label>
+           </div>
+           <div>
+               <label>
+                   Ingrese su contraseña:
+                   <input type="password" name="password" id="password">
+               </label>
+           </div>
+           <div>
+               <label>
+                   Ingrese su correo electrónico:
+                   <input type="email" name="email" id="email">
+               </label>
+           </div>
+       </fieldset>
+       <fieldset>
+           <legend>Datos Personales</legend>
+           <div>
+               <label>
+                   Nombres:
+                   <input type="text" name="name" id="name">
+               </label>
+           </div>
+           <div>
+               <label>
+                   Apellidos:
+                   <input type="text" name="lastname" id="lastname">
+               </label>
+           </div>
+           <div>
+               <label>
+                   Fecha de nacimiento:
+                   <input type="date" name="birthday" id="birthday">
+           </label>
+           </div>
+           <div>
+               <label>
+                   Género:
+                   <label><input type="radio" name="gender" id="gender">Hombre</label>
+                   <label><input type="radio" name="gender" id="gender">Mujer</label>
+               </label>
+           </div>
+       </fieldset>
+       <fieldset>
+           <legend>Datos Académicos</legend>
+           <div>
+               <label>
+                   Grado Académico:
+                   <select name="grade" id="grade">
+                       <optgroup label="Primaria">
+                           <option value="1st">Primero(P)</option>
+                           <option value="2nd">Segundo(P)</option>
+                           <option value="3rd">Tercero(P)</option>
+                           <option value="4th">Cuarto(P)</option>
+                           <option value="5th">Quinto(P)</option>
+                           <option value="6th">Sexto(P)</option>
+                       </optgroup>
+                       <optgroup label="Secundaria">
+                           <option value="1st">Primero(S)</option>
+                           <option value="2nd">Segundo(S)</option>
+                           <option value="3rd">Tercero(S)</option>
+                           <option value="4th">Cuarto(S)</option>
+                           <option value="5th">Quinto(S)</option>
+                       </optgroup>
+                   </select>
+               </label>
+           </div>
+       </fieldset>
+       <!--<input type="submit" value="Registrarse">-->
+   </form>
+   <button id="button">Registrarse</button> 
+   <script>
+       const modal = document.getElementById("modal");
+       const button = document.getElementById("button");
+       button.addEventListener("click", ()=> {
+           modal.setAttribute("open","true")
+       })
+   </script>
+</body>
+</html>
